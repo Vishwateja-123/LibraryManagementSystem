@@ -1,0 +1,22 @@
+[project]
+name = "LibraryManagementSystem"
+version = "1.0.0"
+description = "A simple library management system using Python OOP"
+authors = [
+    {name = "Vishwateja Paidipelly"}
+]
+requires-python = ">=3.10"
+dynamic = ["optional-dependencies"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+optional-dependencies = {dev = {file = ["dev-requirements.txt"]}}
+
+[project.scripts]
+library-system = "LibraryManagementSystem.__main__:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
