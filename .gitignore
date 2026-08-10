@@ -1,21 +1,23 @@
-# Python cache
+# Python artifacts
 __pycache__/
 *.py[cod]
 *$py.class
 
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
 # Virtual environments
-.venv/
 venv/
-env/
 ENV/
+env/
+.venv/
 
-# Testing and coverage
+# Pytest
 .pytest_cache/
-.coverage
-htmlcov/
 
-# IDE and operating-system files
-.vscode/
-.idea/
+# Misc
 .DS_Store
 *.swp
