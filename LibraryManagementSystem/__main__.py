@@ -19,21 +19,22 @@ def showBooks(books):
 
 
 def main():
+    print("WELCOME TO LIBRARY MANAGEMENT SYSTEM")
+    print("\nCREATE LIBRARIAN ACCOUNT")
+    librarianName = input("Enter librarian name: ")
+    librarianUsername = input("Create username: ")
+    librarianPassword = input("Create password: ")
+
     librarian = Librarian(
         1,
         101,
-        "Admin",
-        "admin",
-        "admin123"
+        librarianName,
+        librarianUsername,
+        librarianPassword
     )
 
-    print("WELCOME TO LIBRARY MANAGEMENT SYSTEM")
-    username = input("Enter librarian username: ")
-    password = input("Enter librarian password: ")
-
-    if not librarian.login(username, password):
-        print("Invalid username or password.")
-        return
+    librarian.login(librarianUsername, librarianPassword)
+    print("Librarian account created successfully.")
 
     while True:
         print("\nLIBRARY MENU")
