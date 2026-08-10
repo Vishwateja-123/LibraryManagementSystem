@@ -1,54 +1,52 @@
 # Library Management System
 
-A console-based Library Management System implemented in Python using object-oriented programming. The classes and relationships are based on the UML class diagram prepared for this project.
+This project is a simple command-line Library Management System developed in
+Python using object-oriented programming.
 
-## Classes
+## Main classes
 
-- `User` – common login and logout functionality
-- `Librarian` – manages books, students, borrowing records, and due reminders
-- `Student` – searches, borrows, returns, reserves, and renews books
-- `Book` – stores book information and availability
-- `BorrowRecordHistory` – tracks issue dates, due dates, returns, status, and fines
+- User
+- Librarian
+- Student
+- Book
+- BorrowRecordHistory
 
-## Features
+## Functions
 
 - User login and logout
-- Student registration
-- Add, update, and remove books
-- Search books by title
-- Borrow and return books
-- Reserve unavailable books
-- Renew borrowed books
-- Track borrowing history
-- Calculate overdue fines automatically
-- Send due-date reminders
+- Add, update and remove books
+- Register students
+- Search and borrow books
+- Return, reserve and renew books
+- View borrowing history
+- Calculate late-return fine
 
-## Requirements
+## Project structure
 
-- Python 3.9 or later
-- No external packages are required
+```text
+LibraryManagementSystem/
+    __init__.py
+    __main__.py
+    user.py
+    librarian.py
+    student.py
+    book.py
+    borrow_record_history.py
+tests/
+    test_LibraryManagementSystem.py
+```
 
 ## Run the project
 
-Clone the repository:
-
 ```bash
-git clone https://github.com/Vishwateja-123/LibraryManagementSystem.git
-cd LibraryManagementSystem
+python -m LibraryManagementSystem
 ```
 
-Run the program:
+The application asks you to create a librarian account when it starts.
+
+## Run the tests
 
 ```bash
-python3 library_management_system.py
+pip install -r dev-requirements.txt
+pytest
 ```
-
-## Fine policy
-
-- The normal borrowing period is 14 days.
-- Renewal extends the due date by another 14 days.
-- The overdue fine is Rs.10 per day.
-
-## Author
-
-Vishwateja Paidipelly
